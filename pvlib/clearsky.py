@@ -881,3 +881,11 @@ def bird(zenith, airmass_relative, aod380, aod500, precipitable_water,
     if isinstance(irrads['dni'], pd.Series):
         irrads = pd.DataFrame.from_dict(irrads)
     return irrads
+
+
+if __name__ == '__main__':
+    x = lookup_linke_turbidity(pd.date_range(start=pd.datetime(2000, 1, 1), periods=1, freq='A'),90,-180,'c:/Projects/GitHub/sjanzou/pvlib-python/pvlib/data/LinkeTurbidities.mat',False);
+    y = lookup_linke_turbidity(pd.date_range(start=pd.datetime(2000, 1, 1), periods=1, freq='A'),-90,-180,'c:/Projects/GitHub/sjanzou/pvlib-python/pvlib/data/LinkeTurbidities.mat',False);
+    print x;
+    print y;
+
