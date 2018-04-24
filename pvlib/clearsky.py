@@ -884,8 +884,8 @@ def bird(zenith, airmass_relative, aod380, aod500, precipitable_water,
 
 
 if __name__ == '__main__':
-    x = lookup_linke_turbidity(pd.date_range(start=pd.datetime(2000, 1, 1), periods=1, freq='A'),90,-180,'c:/Projects/GitHub/sjanzou/pvlib-python/pvlib/data/LinkeTurbidities.mat',False);
-    y = lookup_linke_turbidity(pd.date_range(start=pd.datetime(2000, 1, 1), periods=1, freq='A'),-90,-180,'c:/Projects/GitHub/sjanzou/pvlib-python/pvlib/data/LinkeTurbidities.mat',False);
+    x = lookup_linke_turbidity(pd.date_range(start=pd.datetime(2000, 4, 1), periods=1, freq='D'),40.1,-120.0,'c:/Projects/GitHub/sjanzou/pvlib-python/pvlib/data/LinkeTurbidities.mat',False);
+    y = lookup_linke_turbidity(pd.date_range(start=pd.datetime(2000, 5, 6), periods=1, freq='D'),-39.5,15.0,'c:/Projects/GitHub/sjanzou/pvlib-python/pvlib/data/LinkeTurbidities.mat',False);
     print x;
     print y;
 
